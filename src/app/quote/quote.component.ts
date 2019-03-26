@@ -14,8 +14,10 @@ export class QuoteComponent implements OnInit {
     new Quote(4, 'No guts no story','posted by Chris Brady',),
     
   ]
-completeQuote(isComplete,index){
-  if (isComplete){
+deleteQuote(isComplete,index){
+  let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
+
+  if (toDelete){
       this.quotes.splice(index,1);
   }} 
 
