@@ -9,8 +9,9 @@
 
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <li appStrikethrough>{{quote.name}}</li>  
-    <button  (click)='toogleDetails(i)'>Toogle Details</button>
+    <li appStrikethrough>{{quote.name}} submitted on {{quote.submitDate|date}} </li>  
+    <button  (click)='toogleDetails(i)'>Details</button>
+    
 
     <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)= 'deleteQuote($event,i)'></app-quote-details>
 </div>
