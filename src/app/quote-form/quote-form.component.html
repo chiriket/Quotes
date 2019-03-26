@@ -23,7 +23,7 @@
           </div>
         
           <div class="form-group">
-              <label for="Submit">Submit Date</label>
+              <label for="Submit">Submit Date</label><br>
               <input type='date' id="submit" [(ngModel)]="newQuote.submitDate" name="submitDate" #submitDate="ngModel" required >
               <div [hidden]="submitDate.valid || submitDate.pristine" class="alert alert-danger">
                   <p> Submit Date is Required</p>

@@ -7,11 +7,16 @@
   </div>
   
 
-
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
     <li appStrikethrough>{{quote.name}} submitted on {{quote.submitDate|date}} </li>  
     <button  (click)='toogleDetails(i)'>Details</button>
+
+
+  <div class= "votebtn" style="text-align:right">
+    <button class = "btn" (click) = upvote(i)> <i class="fas fa-thumbs-up"></i> </button>
+    <button class = "btn" (click) = downvote(i)> <i class="fas fa-thumbs-down"></i> </button>
+  </div>
     
 
     <app-quote-details *ngIf="quote.showDescription" [quote]='quote'(isComplete)= 'deleteQuote($event,i)'></app-quote-details>
