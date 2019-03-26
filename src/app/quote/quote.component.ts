@@ -15,8 +15,9 @@ export class QuoteComponent implements OnInit {
     
   ]
   addNewQuote(quote){
-    let goalLength = this.quotes.length;
-   
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.submitDate = new Date(quote.submitDate)
     this.quotes.push(quote)}
 
 deleteQuote(isComplete,index){
