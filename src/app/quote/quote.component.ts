@@ -14,6 +14,12 @@ export class QuoteComponent implements OnInit {
     new Quote(4, 'No guts no story','posted by Chris Brady',),
     
   ]
+  addNewQuote(quote){
+    let goalLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.completeDate = new Date(qoute.completeDate)
+    this.quotes.push(quote)}
+
 deleteQuote(isComplete,index){
   let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
 
