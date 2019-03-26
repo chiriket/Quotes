@@ -8,16 +8,15 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote(1,'Only the good die young','posted by Billy Joel',),
-    new Quote(2,'Nitaambia watu nini','posted by Dj Shiti',),
-    new Quote(3, 'Only dead fish go with the flow','posted by Anny',),
-    new Quote(4, 'No guts no story','posted by Chris Brady',),
+    new Quote(1,'Only the good die young','posted by Billy Joel',new Date(2018,3,14)),
+    new Quote(2,'Nitaambia watu nini','posted by Dj Shiti',new Date(2018,6,9)),
+    new Quote(3, 'Only dead fish go with the flow','posted by Anny',new Date(2018,1,12)),
+    new Quote(4, 'No guts no story','posted by Chris Brady',new Date(2018,3,14)),
     
   ]
   addNewQuote(quote){
     let goalLength = this.quotes.length;
-    quote.id=quoteLength+1;
-    quote.completeDate = new Date(qoute.completeDate)
+   
     this.quotes.push(quote)}
 
 deleteQuote(isComplete,index){
